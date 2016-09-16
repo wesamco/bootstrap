@@ -231,6 +231,7 @@ textarea {
 }
 
 html {
+  direction: rtl;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -247,6 +248,7 @@ html {
 }
 
 html {
+  direction: rtl;
   font-size: 16px;
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
@@ -305,8 +307,8 @@ dt {
 }
 
 dd {
+  margin-right: 0;
   margin-bottom: .5rem;
-  margin-left: 0;
 }
 
 blockquote {
@@ -382,12 +384,12 @@ caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   color: #818a91;
-  text-align: left;
+  text-align: right;
   caption-side: bottom;
 }
 
 th {
-  text-align: left;
+  text-align: right;
 }
 
 label {

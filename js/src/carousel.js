@@ -24,8 +24,8 @@ const Carousel = (($) => {
   const DATA_API_KEY        = '.data-api'
   const JQUERY_NO_CONFLICT  = $.fn[NAME]
   const TRANSITION_DURATION = 600
-  const ARROW_LEFT_KEYCODE  = 37 // KeyboardEvent.which value for left arrow key
-  const ARROW_RIGHT_KEYCODE = 39 // KeyboardEvent.which value for right arrow key
+  const ARROW_LEFT_KEYCODE  = 37 // KeyboardEvent.which value for right arrow key
+  const ARROW_RIGHT_KEYCODE = 39 // KeyboardEvent.which value for left arrow key
 
   const Default = {
     interval : 5000,
@@ -62,8 +62,8 @@ const Carousel = (($) => {
     CAROUSEL : 'carousel',
     ACTIVE   : 'active',
     SLIDE    : 'slide',
-    RIGHT    : 'right',
-    LEFT     : 'left',
+    RIGHT    : 'left',
+    LEFT     : 'right',
     ITEM     : 'carousel-item'
   }
 

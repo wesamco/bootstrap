@@ -65,9 +65,9 @@ const Tooltip = (($) => {
 
   const AttachmentMap = {
     TOP    : 'bottom center',
-    RIGHT  : 'middle left',
+    RIGHT  : 'middle right',
     BOTTOM : 'top center',
-    LEFT   : 'middle right'
+    LEFT   : 'middle left'
   }
 
   const HoverState = {

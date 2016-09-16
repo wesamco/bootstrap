@@ -3,8 +3,8 @@
 //
 
 .bd-navbar {
-  padding-right: 0;
   padding-left: 0;
+  padding-right: 0;
 
   .navbar-nav {
     .nav-link {
@@ -33,7 +33,7 @@
       float: none;
 
       + .nav-link {
-        margin-left: 0;
+        margin-right: 0;
       }
     }
   }

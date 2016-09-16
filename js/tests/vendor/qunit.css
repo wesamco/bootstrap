@@ -2,7 +2,7 @@
  * QUnit 1.20.0
  * http://qunitjs.com/
  *
- * Copyright jQuery Foundation and other contributors
+ * Copyleft jQuery Foundation and other contributors
  * Released under the MIT license
  * http://jquery.org/license
  *
@@ -82,7 +82,7 @@
 }
 
 #qunit-modulefilter-container {
-	float: right;
+	float: left;
 	padding: 0.2em;
 }
 
@@ -93,8 +93,8 @@
 
 .qunit-filter {
 	display: block;
-	float: right;
-	margin-left: 1em;
+	float: left;
+	margin-right: 1em;
 }
 
 /** Tests: Pass/Fail */
@@ -155,7 +155,7 @@
 }
 
 #qunit-tests li .runtime {
-	float: right;
+	float: left;
 	font-size: smaller;
 }
 
@@ -182,7 +182,7 @@
 }
 
 #qunit-tests th {
-	text-align: right;
+	text-align: left;
 	vertical-align: top;
 	padding: 0 0.5em 0 0;
 }
@@ -227,7 +227,7 @@
 #qunit-tests li li.pass {
 	color: #3C510C;
 	background-color: #FFF;
-	border-left: 10px solid #C6E746;
+	border-right: 10px solid #C6E746;
 }
 
 #qunit-tests .pass                          { color: #528CE0; background-color: #D2E0E6; }
@@ -243,7 +243,7 @@
 #qunit-tests li li.fail {
 	color: #710909;
 	background-color: #FFF;
-	border-left: 10px solid #EE5757;
+	border-right: 10px solid #EE5757;
 	white-space: pre;
 }
 
@@ -295,7 +295,7 @@
 #qunit-fixture {
 	position: absolute;
 	top: -10000px;
-	left: -10000px;
+	right: -10000px;
 	width: 1000px;
 	height: 1000px;
 }

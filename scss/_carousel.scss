@@ -11,7 +11,7 @@
   > .carousel-item {
     position: relative;
     display: none;
-    transition: .6s ease-in-out left;
+    transition: .6s ease-in-out right;
 
     // Account for jankitude on images
     > img,
@@ -27,19 +27,19 @@
       perspective: 1000px;
 
       &.next,
-      &.active.right {
-        left: 0;
+      &.active.left {
+        right: 0;
         transform: translate3d(100%, 0, 0);
       }
       &.prev,
-      &.active.left {
-        left: 0;
+      &.active.right {
+        right: 0;
         transform: translate3d(-100%, 0, 0);
       }
-      &.next.left,
-      &.prev.right,
+      &.next.right,
+      &.prev.left,
       &.active {
-        left: 0;
+        right: 0;
         transform: translate3d(0, 0, 0);
       }
     }
@@ -52,7 +52,7 @@
   }
 
   > .active {
-    left: 0;
+    right: 0;
   }
 
   > .next,
@@ -63,34 +63,34 @@
   }
 
   > .next {
-    left: 100%;
+    right: 100%;
   }
   > .prev {
-    left: -100%;
+    right: -100%;
   }
-  > .next.left,
-  > .prev.right {
-    left: 0;
+  > .next.right,
+  > .prev.left {
+    right: 0;
   }
 
-  > .active.left {
-    left: -100%;
-  }
   > .active.right {
-    left: 100%;
+    right: -100%;
+  }
+  > .active.left {
+    right: 100%;
   }
 }
 
 
 //
-// Left/right controls for nav
+// Left/left controls for nav
 //
 
 .carousel-control {
   position: absolute;
   top: 0;
+  right: 0;
   bottom: 0;
-  left: 0;
   width: $carousel-control-width;
   font-size: $carousel-control-font-size;
   color: $carousel-control-color;
@@ -101,12 +101,12 @@
   // animation if you trip this while in the middle of another animation.
 
   // Set gradients for backgrounds
-  &.left {
+  &.right {
     @include gradient-x($start-color: rgba(0,0,0,.5), $end-color: rgba(0,0,0,.0001));
   }
-  &.right {
-    right: 0;
-    left: auto;
+  &.left {
+    right: auto;
+    left: 0;
     @include gradient-x($start-color: rgba(0,0,0,.0001), $end-color: rgba(0,0,0,.5));
   }
 
@@ -132,12 +132,12 @@
     line-height: 1;
   }
   .icon-prev {
-    left: 50%;
-    margin-left: -($carousel-icon-width / 2);
-  }
-  .icon-next {
     right: 50%;
     margin-right: -($carousel-icon-width / 2);
+  }
+  .icon-next {
+    left: 50%;
+    margin-left: -($carousel-icon-width / 2);
   }
 
   .icon-prev {
@@ -160,12 +160,12 @@
 
 .carousel-indicators {
   position: absolute;
+  right: 50%;
   bottom: 10px;
-  left: 50%;
   z-index: 15;
   width: $carousel-indicators-width;
-  padding-left: 0;
-  margin-left: -($carousel-indicators-width / 2);
+  padding-right: 0;
+  margin-right: -($carousel-indicators-width / 2);
   text-align: center;
   list-style: none;
 
@@ -232,14 +232,14 @@
       font-size: $carousel-control-sm-up-size;
     }
     .icon-prev {
-      margin-left: -($carousel-control-sm-up-size / 2);
+      margin-right: -($carousel-control-sm-up-size / 2);
     }
     .icon-next {
-      margin-right: -($carousel-control-sm-up-size / 2);
+      margin-left: -($carousel-control-sm-up-size / 2);
     }
   }
 
-  // Show and left align the captions
+  // Show and right align the captions
   .carousel-caption {
     right: ((100% - $carousel-caption-sm-up-width) / 2);
     left: ((100% - $carousel-caption-sm-up-width) / 2);

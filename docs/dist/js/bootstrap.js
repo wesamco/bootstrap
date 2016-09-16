@@ -1,6 +1,6 @@
 /*!
  * Bootstrap v4.0.0-alpha.4 (http://getbootstrap.com)
- * Copyright 2011-2016 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+ * Copyleft 2011-2016 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
@@ -564,8 +564,8 @@ var Carousel = (function ($) {
   var DATA_API_KEY = '.data-api';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var TRANSITION_DURATION = 600;
-  var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
-  var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
+  var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for right arrow key
+  var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for left arrow key
 
   var Default = {
     interval: 5000,
@@ -602,8 +602,8 @@ var Carousel = (function ($) {
     CAROUSEL: 'carousel',
     ACTIVE: 'active',
     SLIDE: 'slide',
-    RIGHT: 'right',
-    LEFT: 'left',
+    RIGHT: 'left',
+    LEFT: 'right',
     ITEM: 'carousel-item'
   };
 
@@ -1400,7 +1400,7 @@ var Dropdown = (function ($) {
   var ESCAPE_KEYCODE = 27; // KeyboardEvent.which value for Escape (Esc) key
   var ARROW_UP_KEYCODE = 38; // KeyboardEvent.which value for up arrow key
   var ARROW_DOWN_KEYCODE = 40; // KeyboardEvent.which value for down arrow key
-  var RIGHT_MOUSE_BUTTON_WHICH = 3; // MouseEvent.which value for the right button (assuming a right-handed mouse)
+  var RIGHT_MOUSE_BUTTON_WHICH = 3; // MouseEvent.which value for the left button (assuming a left-handed mouse)
 
   var Event = {
     HIDE: 'hide' + EVENT_KEY,
@@ -2082,7 +2082,7 @@ var Modal = (function ($) {
     }, {
       key: '_setScrollbar',
       value: function _setScrollbar() {
-        var bodyPadding = parseInt($(Selector.FIXED_CONTENT).css('padding-right') || 0, 10);
+        var bodyPadding = parseInt($(Selector.FIXED_CONTENT).css('padding-left') || 0, 10);
 
         this._originalBodyPadding = document.body.style.paddingRight || '';
 
@@ -2827,9 +2827,9 @@ var Tooltip = (function ($) {
 
   var AttachmentMap = {
     TOP: 'bottom center',
-    RIGHT: 'middle left',
+    RIGHT: 'middle right',
     BOTTOM: 'top center',
-    LEFT: 'middle right'
+    LEFT: 'middle left'
   };
 
   var HoverState = {
@@ -3401,7 +3401,7 @@ var Popover = (function ($) {
   var JQUERY_NO_CONFLICT = $.fn[NAME];
 
   var Default = $.extend({}, Tooltip.Default, {
-    placement: 'right',
+    placement: 'left',
     trigger: 'click',
     content: '',
     template: '<div class="popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<h3 class="popover-title"></h3>' + '<div class="popover-content"></div></div>'

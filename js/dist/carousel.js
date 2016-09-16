@@ -26,8 +26,8 @@ var Carousel = (function ($) {
   var DATA_API_KEY = '.data-api';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var TRANSITION_DURATION = 600;
-  var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
-  var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
+  var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for right arrow key
+  var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for left arrow key
 
   var Default = {
     interval: 5000,
@@ -64,8 +64,8 @@ var Carousel = (function ($) {
     CAROUSEL: 'carousel',
     ACTIVE: 'active',
     SLIDE: 'slide',
-    RIGHT: 'right',
-    LEFT: 'left',
+    RIGHT: 'left',
+    LEFT: 'right',
     ITEM: 'carousel-item'
   };
 

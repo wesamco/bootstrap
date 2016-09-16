@@ -1,14 +1,14 @@
 $(document).ready(function () {
-  $('.tooltip-right').tooltip({
-    placement: 'right',
+  $('.tooltip-left').tooltip({
+    placement: 'left',
     viewport: {selector: 'body', padding: 2}
   })
   $('.tooltip-bottom').tooltip({
     placement: 'bottom',
     viewport: {selector: 'body', padding: 2}
   })
-  $('.tooltip-viewport-right').tooltip({
-    placement: 'right',
+  $('.tooltip-viewport-left').tooltip({
+    placement: 'left',
     viewport: {selector: '.container-viewport', padding: 2}
   })
   $('.tooltip-viewport-bottom').tooltip({

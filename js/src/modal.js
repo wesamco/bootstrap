@@ -417,7 +417,7 @@ const Modal = (($) => {
 
     _setScrollbar() {
       let bodyPadding = parseInt(
-        $(Selector.FIXED_CONTENT).css('padding-right') || 0,
+        $(Selector.FIXED_CONTENT).css('padding-left') || 0,
         10
       )
 

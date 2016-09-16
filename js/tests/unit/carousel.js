@@ -110,8 +110,8 @@ $(function () {
         + '<div class="carousel-caption"/>'
         + '</div>'
         + '</div>'
-        + '<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"/>'
-        + '<a class="right carousel-control" href="#carousel-example-generic" data-slide="next"/>'
+        + '<a class="right carousel-control" href="#carousel-example-generic" data-slide="prev"/>'
+        + '<a class="left carousel-control" href="#carousel-example-generic" data-slide="next"/>'
         + '</div>'
     var $carousel = $(carouselHTML)
 
@@ -169,8 +169,8 @@ $(function () {
         + '</div>'
         + '</div>'
         + '</div>'
-        + '<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>'
-        + '<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>'
+        + '<a class="right carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>'
+        + '<a class="left carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>'
         + '</div>'
     var $carousel = $(carouselHTML)
 
@@ -179,12 +179,12 @@ $(function () {
     $carousel
       .one('slide.bs.carousel', function (e) {
         assert.ok(e.direction, 'direction present on next')
-        assert.strictEqual(e.direction, 'left', 'direction is left on next')
+        assert.strictEqual(e.direction, 'right', 'direction is right on next')
 
         $carousel
           .one('slide.bs.carousel', function (e) {
             assert.ok(e.direction, 'direction present on prev')
-            assert.strictEqual(e.direction, 'right', 'direction is right on prev')
+            assert.strictEqual(e.direction, 'left', 'direction is left on prev')
             done()
           })
           .bootstrapCarousel('prev')
@@ -224,8 +224,8 @@ $(function () {
         + '</div>'
         + '</div>'
         + '</div>'
-        + '<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>'
-        + '<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>'
+        + '<a class="right carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>'
+        + '<a class="left carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>'
         + '</div>'
     var $carousel = $(carouselHTML)
 
@@ -234,12 +234,12 @@ $(function () {
     $carousel
       .one('slid.bs.carousel', function (e) {
         assert.ok(e.direction, 'direction present on next')
-        assert.strictEqual(e.direction, 'left', 'direction is left on next')
+        assert.strictEqual(e.direction, 'right', 'direction is right on next')
 
         $carousel
           .one('slid.bs.carousel', function (e) {
             assert.ok(e.direction, 'direction present on prev')
-            assert.strictEqual(e.direction, 'right', 'direction is right on prev')
+            assert.strictEqual(e.direction, 'left', 'direction is left on prev')
             done()
           })
           .bootstrapCarousel('prev')
@@ -279,8 +279,8 @@ $(function () {
         + '</div>'
         + '</div>'
         + '</div>'
-        + '<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>'
-        + '<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>'
+        + '<a class="right carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>'
+        + '<a class="left carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>'
         + '</div>'
 
     var done = assert.async()
@@ -326,8 +326,8 @@ $(function () {
         + '</div>'
         + '</div>'
         + '</div>'
-        + '<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>'
-        + '<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>'
+        + '<a class="right carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>'
+        + '<a class="left carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>'
         + '</div>'
 
     var done = assert.async()
@@ -373,8 +373,8 @@ $(function () {
         + '</div>'
         + '</div>'
         + '</div>'
-        + '<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>'
-        + '<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>'
+        + '<a class="right carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>'
+        + '<a class="left carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>'
         + '</div>'
     var $carousel = $(templateHTML)
     $carousel.attr('data-interval', 1814)
@@ -455,7 +455,7 @@ $(function () {
     assert.strictEqual($template.find('.carousel-item')[1], $template.find('.active')[0], 'second item active')
   })
 
-  QUnit.test('should go to previous item if left arrow key is pressed', function (assert) {
+  QUnit.test('should go to previous item if right arrow key is pressed', function (assert) {
     assert.expect(2)
     var templateHTML = '<div id="myCarousel" class="carousel" data-interval="false">'
         + '<div class="carousel-inner">'
@@ -481,7 +481,7 @@ $(function () {
     assert.strictEqual($template.find('.carousel-item')[0], $template.find('.active')[0], 'first item active')
   })
 
-  QUnit.test('should go to next item if right arrow key is pressed', function (assert) {
+  QUnit.test('should go to next item if left arrow key is pressed', function (assert) {
     assert.expect(2)
     var templateHTML = '<div id="myCarousel" class="carousel" data-interval="false">'
         + '<div class="carousel-inner">'
@@ -530,11 +530,11 @@ $(function () {
 
     $template.trigger($.Event('keydown', { which: 39 }))
 
-    assert.strictEqual($template.find('.carousel-item')[0], $template.find('.active')[0], 'first item still active after right arrow press')
+    assert.strictEqual($template.find('.carousel-item')[0], $template.find('.active')[0], 'first item still active after left arrow press')
 
     $template.trigger($.Event('keydown', { which: 37 }))
 
-    assert.strictEqual($template.find('.carousel-item')[0], $template.find('.active')[0], 'first item still active after left arrow press')
+    assert.strictEqual($template.find('.carousel-item')[0], $template.find('.active')[0], 'first item still active after right arrow press')
   })
 
   QUnit.test('should ignore keyboard events within <input>s and <textarea>s', function (assert) {
@@ -567,17 +567,17 @@ $(function () {
 
 
     $input.trigger($.Event('keydown', { which: 39 }))
-    assert.strictEqual($template.find('.carousel-item')[0], $template.find('.active')[0], 'first item still active after right arrow press in <input>')
+    assert.strictEqual($template.find('.carousel-item')[0], $template.find('.active')[0], 'first item still active after left arrow press in <input>')
 
     $input.trigger($.Event('keydown', { which: 37 }))
-    assert.strictEqual($template.find('.carousel-item')[0], $template.find('.active')[0], 'first item still active after left arrow press in <input>')
+    assert.strictEqual($template.find('.carousel-item')[0], $template.find('.active')[0], 'first item still active after right arrow press in <input>')
 
 
     $textarea.trigger($.Event('keydown', { which: 39 }))
-    assert.strictEqual($template.find('.carousel-item')[0], $template.find('.active')[0], 'first item still active after right arrow press in <textarea>')
+    assert.strictEqual($template.find('.carousel-item')[0], $template.find('.active')[0], 'first item still active after left arrow press in <textarea>')
 
     $textarea.trigger($.Event('keydown', { which: 37 }))
-    assert.strictEqual($template.find('.carousel-item')[0], $template.find('.active')[0], 'first item still active after left arrow press in <textarea>')
+    assert.strictEqual($template.find('.carousel-item')[0], $template.find('.active')[0], 'first item still active after right arrow press in <textarea>')
   })
 
   QUnit.test('should only add mouseenter and mouseleave listeners when not on mobile', function (assert) {
@@ -622,8 +622,8 @@ $(function () {
         + '<div class="carousel-caption"/>'
         + '</div>'
         + '</div>'
-        + '<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"/>'
-        + '<a class="right carousel-control" href="#carousel-example-generic" data-slide="next"/>'
+        + '<a class="right carousel-control" href="#carousel-example-generic" data-slide="prev"/>'
+        + '<a class="left carousel-control" href="#carousel-example-generic" data-slide="next"/>'
         + '</div>'
     var $carousel = $(carouselHTML)
     var getActiveId = function () { return $carousel.find('.carousel-item.active').attr('id') }
@@ -667,8 +667,8 @@ $(function () {
         + '<div class="carousel-caption"/>'
         + '</div>'
         + '</div>'
-        + '<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"/>'
-        + '<a class="right carousel-control" href="#carousel-example-generic" data-slide="next"/>'
+        + '<a class="right carousel-control" href="#carousel-example-generic" data-slide="prev"/>'
+        + '<a class="left carousel-control" href="#carousel-example-generic" data-slide="next"/>'
         + '</div>'
     var $carousel = $(carouselHTML)
 
@@ -701,8 +701,8 @@ $(function () {
         + '<div class="carousel-caption"/>'
         + '</div>'
         + '</div>'
-        + '<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"/>'
-        + '<a class="right carousel-control" href="#carousel-example-generic" data-slide="next"/>'
+        + '<a class="right carousel-control" href="#carousel-example-generic" data-slide="prev"/>'
+        + '<a class="left carousel-control" href="#carousel-example-generic" data-slide="next"/>'
         + '</div>'
     var $carousel = $(carouselHTML)
     var getActiveId = function () { return $carousel.find('.carousel-item.active').attr('id') }
@@ -747,8 +747,8 @@ $(function () {
         + '<div class="carousel-caption"/>'
         + '</div>'
         + '</div>'
-        + '<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"/>'
-        + '<a class="right carousel-control" href="#carousel-example-generic" data-slide="next"/>'
+        + '<a class="right carousel-control" href="#carousel-example-generic" data-slide="prev"/>'
+        + '<a class="left carousel-control" href="#carousel-example-generic" data-slide="next"/>'
         + '</div>'
     var $carousel = $(carouselHTML)
 

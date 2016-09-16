@@ -49,8 +49,8 @@ body {
   vertical-align: top;
 }
 .cover-container {
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
 }
 
 /* Padding for spacing */
@@ -85,7 +85,7 @@ body {
 }
 
 .nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .nav-masthead .active {
@@ -95,10 +95,10 @@ body {
 
 @media (min-width: 48em) {
   .masthead-brand {
-    float: left;
+    float: right;
   }
   .nav-masthead {
-    float: right;
+    float: left;
   }
 }
 

@@ -24,7 +24,7 @@ const Popover = (($) => {
   const JQUERY_NO_CONFLICT  = $.fn[NAME]
 
   const Default = $.extend({}, Tooltip.Default, {
-    placement : 'right',
+    placement : 'left',
     trigger   : 'click',
     content   : '',
     template  : '<div class="popover" role="tooltip">'

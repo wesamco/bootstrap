@@ -329,11 +329,11 @@ $(function () {
     var originalBodyPad = 0
     var $body = $(document.body)
 
-    $body.css('padding-right', originalBodyPad)
+    $body.css('padding-left', originalBodyPad)
 
     $('<div id="modal-test"/>')
       .on('hidden.bs.modal', function () {
-        var currentBodyPad = parseInt($body.css('padding-right'), 10)
+        var currentBodyPad = parseInt($body.css('padding-left'), 10)
         assert.notStrictEqual($body.attr('style'), '', 'body has non-empty style attribute')
         assert.strictEqual(currentBodyPad, originalBodyPad, 'original body padding was not changed')
         $body.removeAttr('style')
@@ -349,7 +349,7 @@ $(function () {
     assert.expect(1)
     var done = assert.async()
     var $body = $(document.body)
-    var $style = $('<style>body { padding-right: 42px; }</style>').appendTo('head')
+    var $style = $('<style>body { padding-left: 42px; }</style>').appendTo('head')
 
     $('<div id="modal-test"/>')
       .on('hidden.bs.modal', function () {
@@ -367,7 +367,7 @@ $(function () {
     assert.expect(2)
     var done = assert.async()
     var $body = $(document.body)
-    var $style = $('<style>body { padding-right: 42px; }</style>').appendTo('head')
+    var $style = $('<style>body { padding-left: 42px; }</style>').appendTo('head')
 
     $body.css('color', 'red')
 
@@ -390,7 +390,7 @@ $(function () {
     var done = assert.async()
     var $body = $(document.body)
 
-    $body.css('padding-right', '5%')
+    $body.css('padding-left', '5%')
 
     $('<div id="modal-test"/>')
       .on('hidden.bs.modal', function () {

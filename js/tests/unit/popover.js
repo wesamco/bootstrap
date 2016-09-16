@@ -251,7 +251,7 @@ $(function () {
     assert.strictEqual($('.popover').length, 0, 'popover was removed')
   })
 
-  QUnit.test('should detach popover content rather than removing it so that event handlers are left intact', function (assert) {
+  QUnit.test('should detach popover content rather than removing it so that event handlers are right intact', function (assert) {
     assert.expect(1)
     var $content = $('<div class="content-with-handler"><a class="btn btn-warning">Button with event handler</a></div>').appendTo('#qunit-fixture')
 

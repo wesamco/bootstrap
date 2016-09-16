@@ -68,10 +68,10 @@
 //
 
 .navbar-brand {
-  float: left;
+  float: right;
   padding-top:    $navbar-brand-padding-y;
   padding-bottom: $navbar-brand-padding-y;
-  margin-right: 1rem;
+  margin-left: 1rem;
   font-size: $font-size-lg;
 
   @include hover-focus {
@@ -85,12 +85,12 @@
 
 
 .navbar-divider {
-  float: left;
+  float: right;
   width: $border-width;
   padding-top: .425rem;
   padding-bottom: .425rem;
-  margin-right: $navbar-padding-x;
-  margin-left:  $navbar-padding-x;
+  margin-right:  $navbar-padding-x;
+  margin-left: $navbar-padding-x;
   overflow: hidden;
 
   &::before {
@@ -126,7 +126,7 @@
 
 .navbar-nav {
   .nav-item {
-    float: left;
+    float: right;
   }
 
   .nav-link {
@@ -135,12 +135,12 @@
     padding-bottom: .425rem;
 
     + .nav-link {
-      margin-left: 1rem;
+      margin-right: 1rem;
     }
   }
 
   .nav-item + .nav-item {
-    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
 
@@ -231,7 +231,7 @@
     @include media-breakpoint-down(xs) {
       .navbar-nav .nav-item {
         float: none;
-        margin-left: 0;
+        margin-right: 0;
       }
     }
     @include media-breakpoint-up(sm) {
@@ -244,7 +244,7 @@
     @include media-breakpoint-down(sm) {
       .navbar-nav .nav-item {
         float: none;
-        margin-left: 0;
+        margin-right: 0;
       }
     }
     @include media-breakpoint-up(md) {
@@ -257,7 +257,7 @@
     @include media-breakpoint-down(md) {
       .navbar-nav .nav-item {
         float: none;
-        margin-left: 0;
+        margin-right: 0;
       }
     }
     @include media-breakpoint-up(lg) {

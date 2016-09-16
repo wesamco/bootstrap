@@ -10,7 +10,7 @@
     display: inline-block;
     width: 0;
     height: 0;
-    margin-left: $caret-width;
+    margin-right: $caret-width;
     vertical-align: middle;
     content: "";
     border-top: $caret-width solid;
@@ -37,16 +37,16 @@
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  right: 0;
   z-index: $zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
-  float: left;
+  float: right;
   min-width: $dropdown-min-width;
   padding: $dropdown-padding-y 0;
   margin: $dropdown-margin-top 0 0; // override default ul
   font-size: $font-size-base;
   color: $body-color;
-  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  text-align: right; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   list-style: none;
   background-color: $dropdown-bg;
   background-clip: padding-box;
@@ -127,14 +127,14 @@
 //
 // Add extra class to `.dropdown-menu` to flip the alignment of the dropdown
 // menu with the parent.
-.dropdown-menu-right {
-  right: 0;
-  left: auto; // Reset the default from `.dropdown-menu`
+.dropdown-menu-left {
+  right: auto; // Reset the default from `.dropdown-menu`
+  left: 0;
 }
 
-.dropdown-menu-left {
-  right: auto;
-  left: 0;
+.dropdown-menu-right {
+  right: 0;
+  left: auto;
 }
 
 // Dropdown section headers

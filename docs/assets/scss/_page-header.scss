@@ -27,7 +27,7 @@
     padding-top: 4rem;
     padding-bottom: 4rem;
     margin-bottom: 3rem;
-    text-align: left;
+    text-align: right;
 
     .carbonad {
       margin: 2rem 0 0 !important;
@@ -47,13 +47,13 @@
   @include media-breakpoint-up(lg) {
     h1,
     p {
-      margin-right: 380px;
+      margin-left: 380px;
     }
 
     .carbonad {
       position: absolute;
       top: 0;
-      right: .75rem; // offset from the .container's padding
+      left: .75rem; // offset from the .container's padding
       margin: 0 !important;
     }
   }

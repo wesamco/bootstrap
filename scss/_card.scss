@@ -34,7 +34,7 @@
 //   padding: $card-spacer-y $card-spacer-x;
 
 //   .card-link + .card-link {
-//     margin-left: $card-spacer-x;
+//     margin-right: $card-spacer-x;
 //   }
 // }
 
@@ -44,7 +44,7 @@
   }
 
   + .card-link {
-    margin-left: $card-spacer-x;
+    margin-right: $card-spacer-x;
   }
 }
 
@@ -163,7 +163,7 @@
 .card-blockquote {
   padding: 0;
   margin-bottom: 0;
-  border-left: 0;
+  border-right: 0;
 }
 
 // Card image
@@ -264,23 +264,13 @@
       }
 
       + .card {
-        margin-left: 0;
-        border-left: 0;
+        margin-right: 0;
+        border-right: 0;
       }
 
       // Handle rounded corners
       @if $enable-rounded {
         &:first-child {
-          @include border-right-radius(0);
-
-          .card-img-top {
-            border-top-right-radius: 0;
-          }
-          .card-img-bottom {
-            border-bottom-right-radius: 0;
-          }
-        }
-        &:last-child {
           @include border-left-radius(0);
 
           .card-img-top {
@@ -288,6 +278,16 @@
           }
           .card-img-bottom {
             border-bottom-left-radius: 0;
+          }
+        }
+        &:last-child {
+          @include border-right-radius(0);
+
+          .card-img-top {
+            border-top-right-radius: 0;
+          }
+          .card-img-bottom {
+            border-bottom-right-radius: 0;
           }
         }
 

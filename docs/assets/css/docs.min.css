@@ -1,7 +1,7 @@
 /*!
  * Bootstrap Docs (http://getbootstrap.com)
- * Copyright 2011-2016 The Bootstrap Authors
- * Copyright 2011-2016 Twitter, Inc.
+ * Copyleft 2011-2016 The Bootstrap Authors
+ * Copyleft 2011-2016 Twitter, Inc.
  * Licensed under the Creative Commons Attribution 3.0 Unported License. For
  * details, see https://creativecommons.org/licenses/by/3.0/.
  */
@@ -29,8 +29,8 @@
 }
 
 .bd-navbar {
-  padding-right: 0;
   padding-left: 0;
+  padding-right: 0;
 }
 
 .bd-navbar .navbar-nav .nav-link {
@@ -56,7 +56,7 @@
     float: none;
   }
   .bd-navbar .nav-link + .nav-link {
-    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -82,9 +82,9 @@
 }
 
 .bd-masthead .lead {
-  margin-right: auto;
-  margin-bottom: 2rem;
   margin-left: auto;
+  margin-bottom: 2rem;
+  margin-right: auto;
   font-size: 1.25rem;
   color: #fff;
 }
@@ -163,29 +163,29 @@
 }
 
 .bd-featurette .highlight {
-  text-align: left;
+  text-align: right;
 }
 
 .bd-featurette .lead {
-  margin-right: auto;
-  margin-bottom: 2rem;
   margin-left: auto;
+  margin-bottom: 2rem;
+  margin-right: auto;
   font-size: 1rem;
   text-align: center;
 }
 
 @media (min-width: 544px) {
   .bd-featurette {
-    text-align: left;
+    text-align: right;
   }
 }
 
 @media (min-width: 768px) {
   .bd-featurette .col-sm-6:first-child {
-    padding-right: 45px;
+    padding-left: 45px;
   }
   .bd-featurette .col-sm-6:last-child {
-    padding-left: 45px;
+    padding-right: 45px;
   }
 }
 
@@ -204,8 +204,8 @@
 
 @media (min-width: 544px) {
   .half-rule {
-    margin-right: 0;
     margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -258,8 +258,8 @@
 }
 
 .bd-featured-sites {
-  margin-right: -1px;
   margin-left: -1px;
+  margin-right: -1px;
 }
 
 .bd-featured-sites .col-xs-6 {
@@ -272,12 +272,12 @@
 
 @media (min-width: 768px) {
   .bd-featured-sites .col-sm-3:first-child img {
-    border-top-left-radius: .25rem;
-    border-bottom-left-radius: .25rem;
-  }
-  .bd-featured-sites .col-sm-3:last-child img {
     border-top-right-radius: .25rem;
     border-bottom-right-radius: .25rem;
+  }
+  .bd-featured-sites .col-sm-3:last-child img {
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
   }
 }
 
@@ -288,7 +288,7 @@
   overflow: hidden;
   font-size: 13px;
   line-height: 1.5;
-  text-align: left;
+  text-align: right;
   border: solid #866ab3;
   border-width: 1px 0 0;
 }
@@ -311,7 +311,7 @@
   #carbonads {
     position: absolute;
     top: 0;
-    right: 15px;
+    left: 15px;
     margin-top: 0;
   }
   .bd-masthead #carbonads {
@@ -320,8 +320,8 @@
 }
 
 .carbon-img {
-  float: left;
-  margin-left: -145px;
+  float: right;
+  margin-right: -145px;
 }
 
 .carbon-poweredby {
@@ -389,7 +389,7 @@
 }
 
 #markdown-toc ul {
-  padding-left: 2rem;
+  padding-right: 2rem;
   margin-top: .25rem;
   margin-bottom: .25rem;
 }
@@ -423,7 +423,7 @@
     padding-top: 4rem;
     padding-bottom: 4rem;
     margin-bottom: 3rem;
-    text-align: left;
+    text-align: right;
   }
   .bd-pageheader .carbonad {
     margin: 2rem 0 0 !important;
@@ -442,12 +442,12 @@
 @media (min-width: 992px) {
   .bd-pageheader h1,
   .bd-pageheader p {
-    margin-right: 380px;
+    margin-left: 380px;
   }
   .bd-pageheader .carbonad {
     position: absolute;
     top: 0;
-    right: .75rem;
+    left: .75rem;
     margin: 0 !important;
   }
 }
@@ -467,7 +467,7 @@
 
 @media (min-width: 768px) {
   .bd-sidebar {
-    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -488,7 +488,7 @@
 }
 
 .bd-search-results {
-  right: 0;
+  left: 0;
   display: block;
   padding: 0;
   overflow: hidden;
@@ -500,8 +500,8 @@
 }
 
 .bd-search-results .dropdown-item {
-  padding-right: .75rem;
   padding-left: .75rem;
+  padding-right: .75rem;
 }
 
 .bd-search-results .dropdown-item:first-child {
@@ -602,12 +602,12 @@
 
 @media (min-width: 544px) {
   .bd-footer {
-    text-align: left;
+    text-align: right;
   }
 }
 
 .bd-footer-links {
-  padding-left: 0;
+  padding-right: 0;
   margin-bottom: 1rem;
 }
 
@@ -616,7 +616,7 @@
 }
 
 .bd-footer-links li + li {
-  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .bd-example-row .row + .row {
@@ -646,8 +646,8 @@
 .bd-example-container {
   min-width: 16rem;
   max-width: 25rem;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
 }
 
 .bd-example-container-header {
@@ -658,7 +658,7 @@
 }
 
 .bd-example-container-sidebar {
-  float: right;
+  float: left;
   width: 4rem;
   height: 8rem;
   background-color: #fae3c4;
@@ -667,7 +667,7 @@
 
 .bd-example-container-body {
   height: 8rem;
-  margin-right: 4.5rem;
+  margin-left: 4.5rem;
   background-color: #957bbe;
   border-radius: .25rem;
 }
@@ -693,9 +693,9 @@
 @media (min-width: 544px) {
   .bd-example {
     padding: 1.5rem;
-    margin-right: 0;
-    margin-bottom: 0;
     margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 0;
     border-width: .2rem;
   }
 }
@@ -770,7 +770,7 @@
 }
 
 .bd-example > img + img {
-  margin-left: .5rem;
+  margin-right: .5rem;
 }
 
 .bd-example > .btn-group {
@@ -830,28 +830,28 @@
 .bd-example-modal .modal {
   position: relative;
   top: auto;
-  right: auto;
-  bottom: auto;
   left: auto;
+  bottom: auto;
+  right: auto;
   z-index: 1;
   display: block;
 }
 
 .bd-example-modal .modal-dialog {
-  left: auto;
-  margin-right: auto;
+  right: auto;
   margin-left: auto;
+  margin-right: auto;
 }
 
 .bd-example > .dropdown > .dropdown-toggle {
-  float: left;
+  float: right;
 }
 
 .bd-example > .dropdown > .dropdown-menu {
   position: static;
   display: block;
   margin-bottom: .25rem;
-  clear: left;
+  clear: right;
 }
 
 .bd-example-tabs .nav-tabs {
@@ -875,7 +875,7 @@
 .bd-example-popover-static .popover {
   position: relative;
   display: block;
-  float: left;
+  float: right;
   width: 260px;
   margin: 1.25rem;
 }
@@ -918,8 +918,8 @@
 @media (min-width: 544px) {
   .highlight {
     padding: 1.5rem;
-    margin-right: 0;
     margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -1044,7 +1044,7 @@
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   border: 1px solid #eee;
-  border-left-width: .25rem;
+  border-right-width: .25rem;
   border-radius: .25rem;
 }
 
@@ -1066,7 +1066,7 @@
 }
 
 .bd-callout-info {
-  border-left-color: #5bc0de;
+  border-right-color: #5bc0de;
 }
 
 .bd-callout-info h4 {
@@ -1074,7 +1074,7 @@
 }
 
 .bd-callout-warning {
-  border-left-color: #f0ad4e;
+  border-right-color: #f0ad4e;
 }
 
 .bd-callout-warning h4 {
@@ -1082,7 +1082,7 @@
 }
 
 .bd-callout-danger {
-  border-left-color: #d9534f;
+  border-right-color: #d9534f;
 }
 
 .bd-callout-danger h4 {
@@ -1103,12 +1103,12 @@
 
 @media (max-width: 480px) {
   .bd-examples {
-    margin-right: -.75rem;
     margin-left: -.75rem;
+    margin-right: -.75rem;
   }
   .bd-examples > [class^="col-"] {
-    padding-right: .75rem;
     padding-left: .75rem;
+    padding-right: .75rem;
   }
 }
 
@@ -1127,7 +1127,7 @@
 }
 
 .bd-team .github-btn {
-  float: right;
+  float: left;
   width: 180px;
   height: 1.25rem;
   margin-top: .25rem;
@@ -1135,9 +1135,9 @@
 }
 
 .bd-team img {
-  float: left;
+  float: right;
   width: 2rem;
-  margin-right: .5rem;
+  margin-left: .5rem;
   border-radius: .25rem;
 }
 
@@ -1180,8 +1180,8 @@
 }
 
 .bd-brand-item .bd-booticon {
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 768px) {
@@ -1191,7 +1191,7 @@
   }
   .bd-brand-item + .bd-brand-item {
     border-top: 0;
-    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
   }
   .bd-brand-item h1 {
     font-size: 4rem;
@@ -1204,11 +1204,11 @@
 }
 
 .color-swatch {
-  float: left;
+  float: right;
   width: 4rem;
   height: 4rem;
-  margin-right: .25rem;
   margin-left: .25rem;
+  margin-right: .25rem;
   border-radius: .25rem;
 }
 
@@ -1238,7 +1238,7 @@
 .bd-clipboard {
   position: relative;
   display: none;
-  float: right;
+  float: left;
 }
 
 .bd-clipboard + .highlight {
@@ -1248,7 +1248,7 @@
 .btn-clipboard {
   position: absolute;
   top: .5rem;
-  right: .5rem;
+  left: .5rem;
   z-index: 10;
   display: block;
   padding: .25rem .5rem;

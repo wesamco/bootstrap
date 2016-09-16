@@ -353,8 +353,8 @@ $(function () {
   QUnit.test('should add position class before positioning so that position-specific styles are taken into account', function (assert) {
     assert.expect(1)
     var styles = '<style>'
-      + '.tooltip.right { white-space: nowrap; }'
-      + '.tooltip.right .tooltip-inner { max-width: none; }'
+      + '.tooltip.left { white-space: nowrap; }'
+      + '.tooltip.left .tooltip-inner { max-width: none; }'
       + '</style>'
     var $styles = $(styles).appendTo('head')
 
@@ -362,7 +362,7 @@ $(function () {
     var $target = $('<a href="#" rel="tooltip" title="very very very very very very very very long tooltip in one line"/>')
       .appendTo($container)
       .bootstrapTooltip({
-        placement: 'right'
+        placement: 'left'
       })
       .bootstrapTooltip('show')
 
@@ -456,8 +456,8 @@ $(function () {
       .css({
         position: 'absolute',
         bottom: 0,
-        left: 0,
-        textAlign: 'right',
+        right: 0,
+        textAlign: 'left',
         width: 300,
         height: 300
       })
@@ -634,7 +634,7 @@ $(function () {
     var $styles = $(styles).appendTo('head')
 
     $('#qunit-fixture').append(
-        '<div style="position: fixed; top: 0; left: 0;">'
+        '<div style="position: fixed; top: 0; right: 0;">'
       + '  <svg width="200" height="200">'
       + '    <circle cx="100" cy="100" r="10" title="m" id="theCircle" />'
       + '  </svg>'
@@ -645,7 +645,7 @@ $(function () {
       .on('shown.bs.tooltip', function () {
         var offset = $('.tooltip').offset()
         $styles.remove()
-        assert.ok(Math.abs(offset.left - 88) <= 1, 'tooltip has correct horizontal location')
+        assert.ok(Math.abs(offset.right - 88) <= 1, 'tooltip has correct horizontal location')
         $circle.bootstrapTooltip('hide')
         assert.strictEqual($('.tooltip').length, 0, 'tooltip removed from dom')
         done()
@@ -729,11 +729,11 @@ $(function () {
     var done = assert.async()
 
     var styles = '<style>'
-        + '#qunit-fixture { top: 0; left: 0; }'
+        + '#qunit-fixture { top: 0; right: 0; }'
         + '.tooltip, .tooltip *, .tooltip *:before, .tooltip *:after { box-sizing: border-box; }'
         + '.tooltip { position: absolute; }'
         + '.tooltip .tooltip-inner { width: 24px; height: 24px; font-family: Helvetica; }'
-        + '#target { position: absolute; top: 100px; left: 50px; width: 100px; height: 200px; -webkit-transform: rotate(270deg); -ms-transform: rotate(270deg); transform: rotate(270deg); }'
+        + '#target { position: absolute; top: 100px; right: 50px; width: 100px; height: 200px; -webkit-transform: rotate(270deg); -ms-transform: rotate(270deg); transform: rotate(270deg); }'
         + '</style>'
     var $styles = $(styles).appendTo('head')
 
@@ -743,7 +743,7 @@ $(function () {
       .on('shown.bs.tooltip', function () {
         var offset = $('.tooltip').offset()
         $styles.remove()
-        assert.ok(Math.abs(offset.left - 88) <= 1, 'tooltip has correct horizontal location')
+        assert.ok(Math.abs(offset.right - 88) <= 1, 'tooltip has correct horizontal location')
         assert.ok(Math.abs(offset.top - 126) <= 1, 'tooltip has correct vertical location')
         $element.bootstrapTooltip('hide')
         done()

@@ -419,7 +419,7 @@ var Modal = (function ($) {
     }, {
       key: '_setScrollbar',
       value: function _setScrollbar() {
-        var bodyPadding = parseInt($(Selector.FIXED_CONTENT).css('padding-right') || 0, 10);
+        var bodyPadding = parseInt($(Selector.FIXED_CONTENT).css('padding-left') || 0, 10);
 
         this._originalBodyPadding = document.body.style.paddingRight || '';
 

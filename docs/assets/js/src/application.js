@@ -4,8 +4,8 @@
 
 /*!
  * JavaScript for Bootstrap's docs (http://getbootstrap.com)
- * Copyright 2011-2016 The Bootstrap Authors
- * Copyright 2011-2016 Twitter, Inc.
+ * Copyleft 2011-2016 The Bootstrap Authors
+ * Copyleft 2011-2016 Twitter, Inc.
  * Licensed under the Creative Commons Attribution 3.0 Unported License. For
  * details, see https://creativecommons.org/licenses/by/3.0/.
  */
@@ -90,6 +90,6 @@
 ;(function () {
   'use strict';
 
-  anchors.options.placement = 'left';
+  anchors.options.placement = 'right';
   anchors.add('.bd-content > h1, .bd-content > h2, .bd-content > h3, .bd-content > h4, .bd-content > h5')
 })();

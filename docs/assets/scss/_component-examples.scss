@@ -40,8 +40,8 @@
 .bd-example-container {
   min-width: 16rem;
   max-width: 25rem;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
 }
 
 .bd-example-container-header {
@@ -52,7 +52,7 @@
 }
 
 .bd-example-container-sidebar {
-  float: right;
+  float: left;
   width: 4rem;
   height: 8rem;
   background-color: lighten($brand-warning, 25%);
@@ -61,7 +61,7 @@
 
 .bd-example-container-body {
   height: 8rem;
-  margin-right: 4.5rem;
+  margin-left: 4.5rem;
   background-color: lighten($bd-purple, 25%);
   border-radius: .25rem;
 }
@@ -85,9 +85,9 @@
 
   @include media-breakpoint-up(sm) {
     padding: 1.5rem;
-    margin-right: 0;
-    margin-bottom: 0;
     margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 0;
     border-width: .2rem;
   }
 
@@ -167,7 +167,7 @@
 // Images
 .bd-example > img {
   + img {
-    margin-left: .5rem;
+    margin-right: .5rem;
   }
 }
 
@@ -231,27 +231,27 @@
 .bd-example-modal .modal {
   position: relative;
   top: auto;
-  right: auto;
-  bottom: auto;
   left: auto;
+  bottom: auto;
+  right: auto;
   z-index: 1;
   display: block;
 }
 .bd-example-modal .modal-dialog {
-  left: auto;
-  margin-right: auto;
+  right: auto;
   margin-left: auto;
+  margin-right: auto;
 }
 
 // Example dropdowns
 .bd-example > .dropdown > .dropdown-toggle {
-  float: left;
+  float: right;
 }
 .bd-example > .dropdown > .dropdown-menu {
   position: static;
   display: block;
   margin-bottom: .25rem;
-  clear: left;
+  clear: right;
 }
 
 // Example tabbable tabs
@@ -276,7 +276,7 @@
 .bd-example-popover-static .popover {
   position: relative;
   display: block;
-  float: left;
+  float: right;
   width: 260px;
   margin: 1.25rem;
 }
@@ -329,8 +329,8 @@
 
   @include media-breakpoint-up(sm) {
     padding: 1.5rem;
-    margin-right: 0;
     margin-left: 0;
+    margin-right: 0;
   }
 }
 .highlight pre {

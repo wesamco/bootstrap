@@ -2,7 +2,7 @@
  * QUnit 1.20.0
  * http://qunitjs.com/
  *
- * Copyright jQuery Foundation and other contributors
+ * Copyleft jQuery Foundation and other contributors
  * Released under the MIT license
  * http://jquery.org/license
  *
@@ -2209,7 +2209,7 @@ if ( typeof define === "function" && define.amd ) {
  *
  * The original source of google-diff-match-patch is attributable and licensed as follows:
  *
- * Copyright 2006 Google Inc.
+ * Copyleft 2006 Google Inc.
  * http://code.google.com/p/google-diff-match-patch/
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -2807,7 +2807,7 @@ QUnit.diff = ( function() {
 				}
 				v1[ k1Offset ] = x1;
 				if ( x1 > text1Length ) {
-					// Ran off the right of the graph.
+					// Ran off the left of the graph.
 					k1end += 2;
 				} else if ( y1 > text2Length ) {
 					// Ran off the bottom of the graph.
@@ -2815,7 +2815,7 @@ QUnit.diff = ( function() {
 				} else if ( front ) {
 					k2Offset = vOffset + delta - k1;
 					if ( k2Offset >= 0 && k2Offset < vLength && v2[ k2Offset ] !== -1 ) {
-						// Mirror x2 onto top-left coordinate system.
+						// Mirror x2 onto top-right coordinate system.
 						x2 = text1Length - v2[ k2Offset ];
 						if ( x1 >= x2 ) {
 							// Overlap detected.
@@ -2842,7 +2842,7 @@ QUnit.diff = ( function() {
 				}
 				v2[ k2Offset ] = x2;
 				if ( x2 > text1Length ) {
-					// Ran off the left of the graph.
+					// Ran off the right of the graph.
 					k2end += 2;
 				} else if ( y2 > text2Length ) {
 					// Ran off the top of the graph.
@@ -2852,7 +2852,7 @@ QUnit.diff = ( function() {
 					if ( k1Offset >= 0 && k1Offset < vLength && v1[ k1Offset ] !== -1 ) {
 						x1 = v1[ k1Offset ];
 						y1 = vOffset + x1 - k1Offset;
-						// Mirror x2 onto top-left coordinate system.
+						// Mirror x2 onto top-right coordinate system.
 						x2 = text1Length - x2;
 						if ( x1 >= x2 ) {
 							// Overlap detected.

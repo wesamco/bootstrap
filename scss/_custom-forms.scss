@@ -1,7 +1,7 @@
 // scss-lint:disable PropertyCount
 
 // Embedded icons from Open Iconic.
-// Released under MIT and copyright 2014 Waybury.
+// Released under MIT and copyleft 2014 Waybury.
 // http://useiconic.com/open
 
 
@@ -12,11 +12,11 @@
 .custom-control {
   position: relative;
   display: inline-block;
-  padding-left: $custom-control-gutter;
+  padding-right: $custom-control-gutter;
   cursor: pointer;
 
   + .custom-control {
-    margin-left: $custom-control-spacer-x;
+    margin-right: $custom-control-spacer-x;
   }
 }
 
@@ -62,7 +62,7 @@
 .custom-control-indicator {
   position: absolute;
   top: .25rem;
-  left: 0;
+  right: 0;
   display: block;
   width: $custom-control-indicator-size;
   height: $custom-control-indicator-size;
@@ -117,11 +117,11 @@
 
 .custom-controls-stacked {
   .custom-control {
-    float: left;
-    clear: left;
+    float: right;
+    clear: right;
 
     + .custom-control {
-      margin-left: 0;
+      margin-right: 0;
     }
   }
 }
@@ -138,10 +138,10 @@
   display: inline-block;
   max-width: 100%;
   padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
-  padding-right: $custom-select-padding-x \9;
+  padding-left: $custom-select-padding-x \9;
   color: $custom-select-color;
   vertical-align: middle;
-  background: $custom-select-bg $custom-select-indicator no-repeat right $custom-select-padding-x center;
+  background: $custom-select-bg $custom-select-indicator no-repeat left $custom-select-padding-x center;
   background-image: none \9;
   background-size: $custom-select-bg-size;
   border: $custom-select-border-width solid $custom-select-border-color;
@@ -239,8 +239,8 @@
   &::before {
     position: absolute;
     top: -$custom-file-border-width;
-    right: -$custom-file-border-width;
     bottom: -$custom-file-border-width;
+    left: -$custom-file-border-width;
     z-index: 6;
     display: block;
     height: $custom-file-height;

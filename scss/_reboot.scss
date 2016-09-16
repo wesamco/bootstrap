@@ -20,6 +20,7 @@
 // Credit: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 
 html {
+  direction: rtl;
   box-sizing: border-box;
 }
 
@@ -55,12 +56,13 @@ html {
 //
 
 html {
+  direction: rtl;
   // Sets a specific default `font-size` for user with `rem` type scales.
   font-size: $font-size-root;
   // As a side-effect of setting the @viewport above,
   // IE11 & Edge make the scrollbar overlap the content and automatically hide itself when not in use.
   // Unfortunately, the auto-showing of the scrollbar is sometimes too sensitive,
-  // thus making it hard to click on stuff near the right edge of the page.
+  // thus making it hard to click on stuff near the left edge of the page.
   // So we add this style to force IE11 & Edge to use a "normal", non-overlapping, non-auto-hiding scrollbar.
   // See https://github.com/twbs/bootstrap/issues/18543
   -ms-overflow-style: scrollbar;
@@ -144,8 +146,8 @@ dt {
 }
 
 dd {
+  margin-right: 0; // Undo browser default
   margin-bottom: .5rem;
-  margin-left: 0; // Undo browser default
 }
 
 blockquote {
@@ -279,13 +281,13 @@ caption {
   padding-top: $table-cell-padding;
   padding-bottom: $table-cell-padding;
   color: $text-muted;
-  text-align: left;
+  text-align: right;
   caption-side: bottom;
 }
 
 th {
-  // Centered by default, but left-align-ed to match the `td`s below.
-  text-align: left;
+  // Centered by default, but right-align-ed to match the `td`s below.
+  text-align: right;
 }
 
 

@@ -11,7 +11,7 @@
   overflow: hidden;
   font-size: 13px;
   line-height: 1.5;
-  text-align: left;
+  text-align: right;
   border: solid #866ab3;
   border-width: 1px 0 0;
 
@@ -30,7 +30,7 @@
   @include media-breakpoint-up(lg) {
     position: absolute;
     top: 0;
-    right: 15px;
+    left: 15px;
     margin-top: 0;
 
     .bd-masthead & {
@@ -40,8 +40,8 @@
 }
 
 .carbon-img {
-  float: left;
-  margin-left: -145px;
+  float: right;
+  margin-right: -145px;
 }
 
 .carbon-poweredby {

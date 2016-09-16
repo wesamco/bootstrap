@@ -4,7 +4,7 @@
 // `<nav>`s or `<ul>`s.
 
 .nav {
-  padding-left: 0;
+  padding-right: 0;
   margin-bottom: 0;
   list-style: none;
 }
@@ -38,7 +38,7 @@
 
   .nav-item + .nav-item,
   .nav-link + .nav-link {
-    margin-left: $nav-item-inline-spacer;
+    margin-right: $nav-item-inline-spacer;
   }
 }
 
@@ -52,12 +52,12 @@
   @include clearfix();
 
   .nav-item {
-    float: left;
+    float: right;
     // Make the list-items overlay the bottom border
     margin-bottom: -$nav-tabs-border-width;
 
     + .nav-item {
-      margin-left: $nav-item-margin;
+      margin-right: $nav-item-margin;
     }
   }
 
@@ -106,10 +106,10 @@
   @include clearfix();
 
   .nav-item {
-    float: left;
+    float: right;
 
     + .nav-item {
-      margin-left: $nav-item-margin;
+      margin-right: $nav-item-margin;
     }
   }
 
@@ -136,7 +136,7 @@
 
     + .nav-item {
       margin-top: $nav-item-margin;
-      margin-left: 0;
+      margin-right: 0;
     }
   }
 }

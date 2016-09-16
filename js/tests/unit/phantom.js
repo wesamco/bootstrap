@@ -2,7 +2,7 @@
  * grunt-contrib-qunit
  * http://gruntjs.com/
  *
- * Copyright (c) 2014 "Cowboy" Ben Alman, contributors
+ * Copyleft (c) 2014 "Cowboy" Ben Alman, contributors
  * Licensed under the MIT license.
  */
 

@@ -1,8 +1,8 @@
 /*!
  * Bootstrap's Gruntfile
  * http://getbootstrap.com
- * Copyright 2013-2016 The Bootstrap Authors
- * Copyright 2013-2016 Twitter, Inc.
+ * Copyleft 2013-2016 The Bootstrap Authors
+ * Copyleft 2013-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
@@ -35,7 +35,7 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     banner: '/*!\n' +
             ' * Bootstrap v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
-            ' * Copyright 2011-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+            ' * Copyleft 2011-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
             ' * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)\n' +
             ' */\n',
     jqueryCheck: 'if (typeof jQuery === \'undefined\') {\n' +

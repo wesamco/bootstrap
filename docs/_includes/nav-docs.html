@@ -1,58 +1,58 @@
 <form class="bd-search hidden-sm-down">
   <input type="text" class="form-control" id="search-input" placeholder="Search..." autocomplete="off">
   <div class="dropdown-menu bd-search-results" id="search-results"></div>
-</form>
+
 
 <nav class="bd-links" id="docsNavbarContent">
-  {% for group in site.data.nav %}
-  {% assign link = group.pages | first %}
-  {% assign slug = group.title | downcase | replace: ' ', '-' || page.title | downcase | replace: ' ', '-' %}
-  {% assign active = nil %}
+  {% ونف زفنرس طم صطقه.داقا.ماش %}
+  {% اصصطزم كطمظ = زفنرس.سازهص | وطفصق %}
+  {% اصصطزم صكرز = زفنرس.قطقكه | دنتمجاصه | فهسكاجه: ' ', '-' || سازه.قطقكه | دنتمجاصه | فهسكاجه: ' ', '-' %}
+  {% اصصطزم اجقطشه = مطك %}
 
-  {% if page.url contains slug %}
-    {% assign active = 'active' %}
-  {% endif %}
+  {% طو سازه.رفك جنمقاطمص صكرز %}
+    {% اصصطزم اجقطشه = 'اجقطشه' %}
+  {% همدطو %}
 
   <div class="bd-toc-item {{ active }}">
-    {% if slug == "examples" %}
+    {% طو صكرز == "هثالسكهص" %}
         <a class="bd-toc-link" href="{{ site.baseurl }}/{{ group.title | downcase | replace: ' ', '-' }}/">
-      {% else %}
+      {% هكصه %}
         <a class="bd-toc-link" href="{{ site.baseurl }}/{{ group.title | downcase | replace: ' ', '-' }}/{{ link.title | downcase | replace: ' ', '-' || page.title | downcase | replace: ' ', '-'  }}">
-      {% endif %}
-        {{ group.title }}
+      {% همدطو %}
+        {{ زفنرس.قطقكه }}
       </a>
 
       <ul class="nav bd-sidenav">
-        {% for doc in group.pages %}
-          {% assign slug = doc.title | downcase | replace: ' ', '-' | replace:'-&-','-' %}
-          {% capture slug %}/{{ slug }}{% endcapture %}
-          {% assign active = nil %}
+        {% ونف دنج طم زفنرس.سازهص %}
+          {% اصصطزم صكرز = دنج.قطقكه | دنتمجاصه | فهسكاجه: ' ', '-' | فهسكاجه:'-&-','-' %}
+          {% جاسقرفه صكرز %}/{{ صكرز }}{% همدجاسقرفه %}
+          {% اصصطزم اجقطشه = مطك %}
 
-          {% if page.url contains slug %}
-            {% assign active = 'active bd-sidenav-active' %}
-          {% endif %}
+          {% طو سازه.رفك جنمقاطمص صكرز %}
+            {% اصصطزم اجقطشه = 'اجقطشه بد-صطدهماش-اجقطشه' %}
+          {% همدطو %}
 
           <li class="{{ active }}">
             <a href="{{ site.baseurl }}/{{ group.title | downcase | replace: ' ', '-' }}/{{ doc.title | downcase | replace: ' ', '-' | replace:'-&-','-' }}">
-              {{ doc.title }}
+              {{ دنج.قطقكه }}
             </a>
 
-            {% comment %}
-            {% unless doc.sections == nil %}
+            {% جنللهمق %}
+            {% رمكهصص دنج.صهجقطنمص == مطك %}
               <ul class="nav">
-                {% for section in doc.sections %}
+                {% ونف صهجقطنم طم دنج.صهجقطنمص %}
                   <li>
                     <a href="#{{ section.title | downcase | replace: ' ', '-' }}">
-                      {{ section.title }}
+                      {{ صهجقطنم.قطقكه }}
                     </a>
                   </li>
-                {% endfor %}
+                {% همدونف %}
               </ul>
-            {% endunless %}
-            {% endcomment %}
+            {% همدرمكهصص %}
+            {% همدجنللهمق %}
           </li>
-        {% endfor %}
+        {% همدونف %}
       </ul>
-    </div>
-  {% endfor %}
+    </a></div>
+  {% همدونف %}
 </nav>

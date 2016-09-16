@@ -20,9 +20,9 @@ body {
 }
 
 .about {
-  float: left;
+  float: right;
   max-width: 30rem;
-  margin-right: 3rem;
+  margin-left: 3rem;
 }
 
 .social a {
@@ -60,7 +60,7 @@ body {
 }
 
 .card {
-  float: left;
+  float: right;
   width: 33.333%;
   padding: .75rem;
   margin-bottom: 2rem;

@@ -28,7 +28,7 @@ var Dropdown = (function ($) {
   var ESCAPE_KEYCODE = 27; // KeyboardEvent.which value for Escape (Esc) key
   var ARROW_UP_KEYCODE = 38; // KeyboardEvent.which value for up arrow key
   var ARROW_DOWN_KEYCODE = 40; // KeyboardEvent.which value for down arrow key
-  var RIGHT_MOUSE_BUTTON_WHICH = 3; // MouseEvent.which value for the right button (assuming a right-handed mouse)
+  var RIGHT_MOUSE_BUTTON_WHICH = 3; // MouseEvent.which value for the left button (assuming a left-handed mouse)
 
   var Event = {
     HIDE: 'hide' + EVENT_KEY,

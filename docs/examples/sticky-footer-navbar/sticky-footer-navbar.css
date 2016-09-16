@@ -1,6 +1,6 @@
 /* Sticky footer styles
 -------------------------------------------------- */
-html {
+html{
   position: relative;
   min-height: 100%;
 }
@@ -28,8 +28,8 @@ body > .container {
 }
 
 .footer > .container {
-  padding-right: 15px;
   padding-left: 15px;
+  padding-right: 15px;
 }
 
 code {

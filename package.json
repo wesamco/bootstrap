@@ -1,8 +1,9 @@
 {
-  "name": "bootstrap",
+  "name": "bootstrap-rtl",
   "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
   "version": "4.0.0-alpha.4",
   "keywords": [
+    "rtl",
     "css",
     "sass",
     "mobile-first",
